@@ -43,7 +43,6 @@ class IGDBClient {
     this.clientId = process.env.TWITCH_CLIENT_ID || '';
     this.clientSecret = process.env.TWITCH_CLIENT_SECRET || '';
     
-    // Note: Credentials are loaded at runtime, so this check may be misleading during build
   }
 
   private async getAccessToken(): Promise<string> {
