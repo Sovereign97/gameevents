@@ -248,10 +248,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 About
 
-Created by **Sovereign97** as a demonstration of modern web development and DevOps practices.
+Created by **Ridwan Ali** as a demonstration of modern web development and DevOps practices.
 
 - **Portfolio**: [Coming Soon](#)
-- **LinkedIn**: [Connect with me](https://linkedin.com/in/your-profile)
+- **LinkedIn**: [Connect with me](https://linkedin.com/in/ridwan-ali)
 - **GitHub**: [@Sovereign97](https://github.com/Sovereign97)
 
 ---
@@ -260,9 +260,9 @@ Created by **Sovereign97** as a demonstration of modern web development and DevO
 
 **Interested in discussing this project or potential opportunities?**
 
-📧 **Email**: your.email@example.com  
-💼 **LinkedIn**: [Connect with me](https://linkedin.com/in/your-profile)  
-🌐 **Portfolio**: [View more projects](https://your-portfolio.com)
+📧 **Email**: ridwan.a.ali97@gmail.com  
+💼 **LinkedIn**: [Connect with me](https://linkedin.com/in/ridwan-ali)  
+🌐 **Other Projects**: [View more projects](https://badminton-weather.vercel.app)
 
 ---
 
