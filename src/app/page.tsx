@@ -174,7 +174,17 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-3xl font-bold text-gray-900">GameEvents</h1>
-              <p className="text-gray-600">Your gaming calendar & release tracker</p>
+              <p className="text-gray-600">
+                Your gaming calendar & release tracker | 
+                <a 
+                  href="https://github.com/Sovereign97/gameevents" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="ml-1 text-blue-600 hover:text-blue-800 underline"
+                >
+                  View Source
+                </a>
+              </p>
             </div>
           </div>
         </div>
