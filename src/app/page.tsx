@@ -193,10 +193,14 @@ export default function Home() {
                 </div>
                 <h3 className="text-4xl font-bold mb-4">{featuredGame.name}</h3>
                 <div className="max-w-2xl">
-                  <CountdownTimer 
-                    releaseDate={featuredGame.first_release_date} 
-                    gameName={featuredGame.name}
-                  />
+                  {featuredGame.first_release_date ? (
+                    <CountdownTimer 
+                      releaseDate={featuredGame.first_release_date} 
+                      gameName={featuredGame.name}
+                    />
+                  ) : (
+                    <p className="text-lg text-gray-600">Release date to be announced</p>
+                  )}
                 </div>
               </div>
             </div>
