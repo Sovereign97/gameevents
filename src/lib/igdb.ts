@@ -102,7 +102,7 @@ class IGDBClient {
 
     const query = `
       fields name, summary, first_release_date, cover.url, screenshots.url, genres.name, platforms.name, platforms.abbreviation, rating, rating_count, hypes;
-      where first_release_date >= ${today} & first_release_date <= ${sixMonthsFromNow} & category = 0 & genres != [32];
+      where first_release_date >= ${today} & first_release_date <= ${sixMonthsFromNow} & category = 0 & genres != [32] & hypes >= 10;
       sort first_release_date asc;
       limit ${limit};
     `;
@@ -116,7 +116,7 @@ class IGDBClient {
 
     const query = `
       fields name, summary, first_release_date, cover.url, screenshots.url, genres.name, platforms.name, platforms.abbreviation, rating, rating_count, hypes;
-      where first_release_date >= ${oneMonthAgo} & first_release_date <= ${today} & category = 0 & genres != [32];
+      where first_release_date >= ${oneMonthAgo} & first_release_date <= ${today} & category = 0 & genres != [32] & hypes >= 10;
       sort first_release_date desc;
       limit ${limit};
     `;
@@ -127,7 +127,7 @@ class IGDBClient {
   async getTrendingGames(limit: number = 20): Promise<Game[]> {
     const query = `
       fields name, summary, first_release_date, cover.url, screenshots.url, genres.name, platforms.name, platforms.abbreviation, rating, rating_count, hypes;
-      where hypes > 5 & rating > 70 & category = 0 & genres != [32];
+      where hypes >= 10 & rating > 70 & category = 0 & genres != [32];
       sort hypes desc;
       limit ${limit};
     `;
