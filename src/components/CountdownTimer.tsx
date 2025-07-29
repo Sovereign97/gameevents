@@ -49,25 +49,25 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ releaseDate, gameName }
 
   return (
     <div className="text-center">
-      <div className="flex justify-center space-x-8 mb-4">
+      <div className="flex justify-center space-x-4 md:space-x-8 mb-4">
         <div className="text-center">
-          <div className="text-4xl font-bold text-white mb-1">{String(timeLeft.days)}</div>
-          <div className="text-sm text-white/80 uppercase tracking-wide">Days</div>
+          <div className="text-2xl md:text-4xl font-bold text-white mb-1">{String(timeLeft.days)}</div>
+          <div className="text-xs md:text-sm text-white/80 uppercase tracking-wide">Days</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-white mb-1">{String(timeLeft.hours)}</div>
-          <div className="text-sm text-white/80 uppercase tracking-wide">Hours</div>
+          <div className="text-2xl md:text-4xl font-bold text-white mb-1">{String(timeLeft.hours)}</div>
+          <div className="text-xs md:text-sm text-white/80 uppercase tracking-wide">Hours</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-white mb-1">{String(timeLeft.minutes)}</div>
-          <div className="text-sm text-white/80 uppercase tracking-wide">Minutes</div>
+          <div className="text-2xl md:text-4xl font-bold text-white mb-1">{String(timeLeft.minutes)}</div>
+          <div className="text-xs md:text-sm text-white/80 uppercase tracking-wide">Minutes</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-white mb-1">{String(timeLeft.seconds)}</div>
-          <div className="text-sm text-white/80 uppercase tracking-wide">Seconds</div>
+          <div className="text-2xl md:text-4xl font-bold text-white mb-1">{String(timeLeft.seconds)}</div>
+          <div className="text-xs md:text-sm text-white/80 uppercase tracking-wide">Seconds</div>
         </div>
       </div>
-      <p className="text-sm text-white/90">Until {gameName} releases</p>
+      <p className="text-xs md:text-sm text-white/90">Until {gameName} releases</p>
     </div>
   );
 };

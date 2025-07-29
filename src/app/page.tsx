@@ -195,33 +195,33 @@ export default function Home() {
         {/* Featured Game with Countdown */}
         {featuredGame && (
           <section className="mb-12">
-            <div className="bg-gradient-to-r from-purple-600 to-blue-700 rounded-2xl p-8 text-white relative overflow-hidden">
+            <div className="bg-gradient-to-r from-purple-600 to-blue-700 rounded-2xl p-4 sm:p-8 text-white relative overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-20" />
-              <div className="relative z-10 flex items-center gap-8">
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-4 md:gap-8">
                 {/* Game Cover Image */}
                 <div className="flex-shrink-0">
                   {featuredGame.cover?.url ? (
                     <Image
                       src={formatImageUrl(featuredGame.cover.url, 'cover_big')}
                       alt={featuredGame.name}
-                      width={200}
-                      height={267}
-                      className="rounded-xl shadow-2xl border-4 border-white/20"
+                      width={150}
+                      height={200}
+                      className="w-[150px] h-[200px] md:w-[200px] md:h-[267px] rounded-xl shadow-2xl border-4 border-white/20 object-cover"
                     />
                   ) : (
-                    <div className="w-[200px] h-[267px] bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl shadow-2xl border-4 border-white/20 flex items-center justify-center">
-                      <span className="text-white text-lg font-semibold text-center px-4">{featuredGame.name}</span>
+                    <div className="w-[150px] h-[200px] md:w-[200px] md:h-[267px] bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl shadow-2xl border-4 border-white/20 flex items-center justify-center">
+                      <span className="text-white text-sm md:text-lg font-semibold text-center px-4">{featuredGame.name}</span>
                     </div>
                   )}
                 </div>
                 
                 {/* Game Info */}
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-4">
-                    <Clock className="w-6 h-6" />
-                    <h2 className="text-2xl font-bold">Most Anticipated</h2>
+                <div className="flex-1 text-center md:text-left">
+                  <div className="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                    <Clock className="w-5 h-5 md:w-6 md:h-6" />
+                    <h2 className="text-xl md:text-2xl font-bold">Most Anticipated</h2>
                   </div>
-                  <h3 className="text-4xl font-bold mb-4">{featuredGame.name}</h3>
+                  <h3 className="text-2xl md:text-4xl font-bold mb-4">{featuredGame.name}</h3>
                   <div className="max-w-2xl">
                     {featuredGame.first_release_date ? (
                       <CountdownTimer 
@@ -229,7 +229,7 @@ export default function Home() {
                         gameName={featuredGame.name}
                       />
                     ) : (
-                      <p className="text-lg text-gray-600">Release date to be announced</p>
+                      <p className="text-base md:text-lg text-gray-600">Release date to be announced</p>
                     )}
                   </div>
                 </div>
