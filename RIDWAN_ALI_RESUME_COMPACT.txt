@@ -1,0 +1,43 @@
+RIDWAN ALI
+Flushing, NY | 347-220-2604 | ridwan.a.ali97@gmail.com | https://github.com/Sovereign97/gameevents
+
+PROFESSIONAL EXPERIENCE
+Technician, Micro Center, Flushing, NY (May 2025 – Present)
+• Diagnose/repair 50+ PCs/Apple devices weekly • Configure OS, BIOS, custom builds • Network troubleshooting, router/VPN setup
+
+Connected Devices Expert, Best Buy, Flushing, NY (Oct 2018 – Jan 2025)
+• Technical consultations for 30+ customers weekly, 95% satisfaction • Top store ranking (2019) • Staff training on emerging tech
+
+IT Technician, Nagreeka Real Estate Ltd., Dhaka (May 2016 – Jun 2018)
+• Managed Windows Server/AD for 100+ users • Network maintenance across sites • PowerShell automation (60% task reduction)
+
+TECHNICAL SKILLS
+Languages: JavaScript, TypeScript, Python, Java, C++ | Web: React, Next.js 14, Tailwind, Node.js
+DevOps: Docker, GitHub Actions, CI/CD, Trivy Security Scanning | Tools: Git, PowerShell, Vercel
+OS: Windows, Linux, macOS | Certifications: CompTIA A+ (2016)
+
+EDUCATION
+CUNY Queens College — B.S. Computer Science (Aug 2024)
+Coursework: Data Structures, Operating Systems, Networking, Databases, Web Development
+
+PROJECTS
+GameEvents - Gaming Release Calendar | Live: https://gameevents.vercel.app | Code: https://github.com/Sovereign97/gameevents
+Full-stack gaming tracker with Next.js 14, TypeScript, IGDB API integration
+• Enterprise DevOps: 6-stage CI/CD pipeline, automated testing, security scanning, zero-downtime deployments
+• Containerization: Multi-stage Docker builds, security hardening, multi-platform support (AMD64/ARM64)
+• Security & Monitoring: Trivy vulnerability scanning, health monitoring, API connectivity validation
+• Cloud Architecture: Automated Vercel deployments, environment management, rollback capabilities
+
+Can I Play Badminton? | Weather forecasting app using React/Next.js and OpenWeatherMap API
+• Analyzes 7-day weather conditions with color-coded visualization for optimal badminton playing conditions
+• Implements weather criteria logic (temperature, wind speed, humidity, precipitation) with responsive UI design
+
+ADDITIONAL EXPERIENCE
+Home Lab: Enterprise network simulation (pfSense, Pi-hole DNS, VPN tunnels, monitoring dashboards)
+Coding Club: Code.Resolve() member at Queens College - workshops and coding challenges
+
+KEY STRENGTHS
+• Modern DevOps: Docker, CI/CD, automated deployments, security scanning, infrastructure as code
+• Full-Stack Development: Next.js, TypeScript, React, API integration, responsive design
+• IT Foundation: Hardware diagnostics, network configuration, system administration
+• Problem-Solving: Hardware to cloud deployment pipeline troubleshooting 

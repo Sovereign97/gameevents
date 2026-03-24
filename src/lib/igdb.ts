@@ -6,6 +6,9 @@ interface TwitchTokenResponse {
   token_type: string;
 }
 
+/** Minimum IGDB hypes (pre-release follows) — filters out very low-interest titles */
+const MIN_HYPES = 5;
+
 interface Game {
   id: number;
   name: string;
@@ -102,7 +105,7 @@ class IGDBClient {
 
     const query = `
       fields name, summary, first_release_date, cover.url, screenshots.url, genres.name, platforms.name, platforms.abbreviation, rating, rating_count, hypes;
-      where first_release_date >= ${today} & first_release_date <= ${sixMonthsFromNow} & game_type = 0 & genres != [32];
+      where first_release_date >= ${today} & first_release_date <= ${sixMonthsFromNow} & game_type = 0 & genres != [32] & hypes >= ${MIN_HYPES};
       sort first_release_date asc;
       limit ${limit};
     `;
@@ -116,7 +119,7 @@ class IGDBClient {
 
     const query = `
       fields name, summary, first_release_date, cover.url, screenshots.url, genres.name, platforms.name, platforms.abbreviation, rating, rating_count, hypes;
-      where first_release_date >= ${threeMonthsAgo} & first_release_date <= ${today} & game_type = 0 & genres != [32];
+      where first_release_date >= ${threeMonthsAgo} & first_release_date <= ${today} & game_type = 0 & genres != [32] & hypes >= ${MIN_HYPES};
       sort first_release_date desc;
       limit ${limit};
     `;
@@ -131,7 +134,7 @@ class IGDBClient {
 
     const query = `
       fields name, summary, first_release_date, cover.url, screenshots.url, genres.name, platforms.name, platforms.abbreviation, rating, rating_count, hypes;
-      where first_release_date >= ${oneYearAgo} & first_release_date <= ${sixMonthsFromNow} & game_type = 0 & genres != [32] & rating > 60;
+      where first_release_date >= ${oneYearAgo} & first_release_date <= ${sixMonthsFromNow} & game_type = 0 & genres != [32] & rating > 60 & hypes >= ${MIN_HYPES};
       sort hypes desc;
       limit ${limit};
     `;

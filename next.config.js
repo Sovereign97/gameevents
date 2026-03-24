@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable standalone output for Docker builds
-  output: 'standalone',
+  // Standalone is for Docker (see Dockerfile). Omit on Vercel (VERCEL is set during their build).
+  ...(process.env.VERCEL ? {} : { output: 'standalone' }),
   
   // Image optimization - Fix for IGDB images
   images: {

@@ -1,0 +1,45 @@
+# RIDWAN ALI
+**Flushing, NY | 347-220-2604 | ridwan.a.ali97@gmail.com | [GitHub](https://github.com/Sovereign97/gameevents)**
+
+## PROFESSIONAL EXPERIENCE
+
+**Technician, Micro Center, Flushing, NY** — *May 2025 – Present*  
+• Diagnose and repair 50+ customer PCs/Apple devices weekly • Configure operating systems, BIOS updates, and custom builds • Troubleshoot network connectivity and configure routers/VPNs for small office setups
+
+**Connected Devices Expert, Best Buy, Flushing, NY** — *Oct 2018 – Jan 2025*  
+• Provided technical consultations for smart home setups to 30+ customers weekly, achieving 95%+ satisfaction • Ranked top in store customer satisfaction (2019) • Trained staff on emerging technologies and troubleshooting
+
+**IT Technician, Nagreeka Real Estate Ltd., Dhaka** — *May 2016 – Jun 2018*  
+• Managed Windows Server/Active Directory for 100+ users • Maintained networks across multiple sites • Developed PowerShell scripts for automated backups, reducing manual tasks by 60%
+
+## TECHNICAL SKILLS
+**Languages:** JavaScript, TypeScript, Python, Java, C++ **|** **Web:** React, Next.js 14, HTML/CSS, Tailwind, Node.js  
+**DevOps:** Docker, GitHub Actions, CI/CD, Security Scanning (Trivy), Infrastructure as Code  
+**Tools:** Git, Active Directory, PowerShell, Vercel **|** **OS:** Windows, Linux, macOS **|** **CompTIA A+** (2016)
+
+## EDUCATION
+**CUNY Queens College** — *B.S. Computer Science, Aug 2024*  
+*Coursework: Data Structures, Operating Systems, Networking, Databases, Web Development*
+
+## PROJECTS
+
+**GameEvents - Gaming Release Calendar** | [Live](https://gameevents.vercel.app) | [Code](https://github.com/Sovereign97/gameevents)  
+Full-stack gaming release tracker with real-time countdown timers built using Next.js 14, TypeScript, and IGDB API  
+• **Enterprise DevOps:** 6-stage CI/CD pipeline with GitHub Actions, automated testing, security scanning, and zero-downtime deployments  
+• **Containerization:** Multi-stage Docker builds with security hardening and multi-platform support (AMD64/ARM64)  
+• **Security & Monitoring:** Trivy vulnerability scanning, health monitoring, and API connectivity validation  
+• **Cloud Architecture:** Automated Vercel deployments with environment management and rollback capabilities  
+
+**Can I Play Badminton?** — Weather forecasting application using React/Next.js and OpenWeatherMap API  
+• Analyzes 7-day weather conditions with color-coded visualization for optimal badminton playing conditions  
+• Implements weather criteria logic (temperature, wind speed, humidity, precipitation) with responsive UI design
+
+## ADDITIONAL EXPERIENCE
+**Home Lab:** Enterprise-simulated network with pfSense firewall, Pi-hole DNS, VPN tunnels, and monitoring dashboards  
+**Coding Club:** Active member of Code.Resolve() at Queens College - organize workshops and coding challenges
+
+## KEY STRENGTHS
+• **Modern DevOps Skills:** Docker, CI/CD, automated deployments, security scanning, infrastructure as code  
+• **Full-Stack Development:** Next.js, TypeScript, React, API integration, responsive design  
+• **IT Foundation:** Hardware diagnostics, network configuration, system administration, customer service  
+• **Problem-Solving:** Systematic troubleshooting from hardware to cloud deployment pipelines 

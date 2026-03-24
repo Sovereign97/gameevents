@@ -1,0 +1,94 @@
+# RIDWAN ALI
+**Flushing, NY | 347-220-2604 | ridwan.a.ali97@gmail.com | [GitHub](https://github.com/Sovereign97/gameevents)**
+
+---
+
+## PROFESSIONAL EXPERIENCE
+
+### Technician, Micro Center, Flushing, NY — May 2025 – Present
+• Diagnose and repair 50+ customer PCs, Apple devices and components weekly, including motherboard, LCD Assembly, RAM, GPU, and storage replacements  
+• Configure and install operating systems, BIOS updates, and software applications tailored to customer needs  
+• Assist with building custom systems for gaming, content creation, and productivity; advise on optimal component selection  
+• Troubleshoot network connectivity issues and configure routers, switches, and VPNs for small office/home setups  
+
+### Connected Devices Expert, Best Buy, Flushing, NY — Oct 2018 – Jan 2025
+• Provided advanced technical consultations for smart home setups and networking equipment to 30+ customers weekly  
+• Led customer education sessions on device security and network optimization, achieving 95%+ satisfaction ratings  
+• Ranked top in customer satisfaction for the store in 2019 with over 25 five-star surveys  
+• Trained and mentored new staff on emerging technologies and systematic troubleshooting methods  
+
+### IT Technician, Nagreeka Real Estate Ltd., Dhaka — May 2016 – Jun 2018
+• Managed Windows Server environments using Active Directory for 100+ user accounts  
+• Installed and maintained wired/wireless networks across multiple office sites, optimizing bandwidth and uptime  
+• Developed PowerShell scripts for automated system backups and log rotation, reducing manual tasks by 60%  
+• Digitized over 500 documents through Salesforce CRM integration, reducing file retrieval times by 30%  
+
+---
+
+## TECHNICAL SKILLS
+
+**Languages:** C++, Java, JavaScript, Python, TypeScript  
+**Web Technologies:** React, Next.js 14, HTML/CSS, Tailwind CSS, Node.js  
+**DevOps & Automation:** Docker, GitHub Actions, CI/CD Pipelines, Security Scanning (Trivy), Infrastructure as Code  
+**Tools:** Active Directory, Git, Salesforce, PowerShell, Apache, Vercel, Health Monitoring  
+**Operating Systems:** Windows, Linux, macOS  
+**Networking:** TCP/IP, VPN, DNS, DHCP, VLAN, Firewalls  
+**Cloud Platforms:** Vercel, Docker Hub, GitHub Actions  
+**Certifications:** CompTIA A+ (2016)  
+
+---
+
+## DEVOPS & AUTOMATION EXPERTISE
+
+**Containerization:** Docker multi-stage builds, Docker Compose, image optimization, multi-platform deployment  
+**CI/CD Pipelines:** GitHub Actions workflows, automated testing, security scanning, deployment automation  
+**Security:** Vulnerability scanning (Trivy), dependency auditing, security headers, non-root containers  
+**Monitoring:** Health checks, API endpoint monitoring, performance validation, uptime tracking  
+**Cloud Deployment:** Automated Vercel deployments, environment management, zero-downtime releases  
+
+---
+
+## EDUCATION
+
+### CUNY Queens College — B.S. in Computer Science, Aug 2024
+
+**Relevant Coursework:** Data Structures & Algorithms, Operating Systems, Networking, Distributed Systems, Databases, Web Development, Object-Oriented Programming, Linear Algebra, Discrete Math, Functional Programming, Calculus, Probability
+
+---
+
+## PROJECTS
+
+### GameEvents - Gaming Release Calendar 
+**Live:** https://gameevents.vercel.app | **Code:** https://github.com/Sovereign97/gameevents
+
+Developed a full-stack gaming release tracking application featuring real-time countdown timers and comprehensive DevOps implementation. Built with Next.js 14, TypeScript, and Tailwind CSS, integrating IGDB API for live gaming data.
+
+**Key Technical Achievements:**
+• **Enterprise DevOps Pipeline:** Implemented 6-stage CI/CD workflow with GitHub Actions including automated testing, security scanning, Docker builds, and zero-downtime deployments  
+• **Containerization:** Created multi-stage Docker builds with security hardening, non-root execution, and multi-platform support (AMD64/ARM64)  
+• **Security Integration:** Automated vulnerability scanning with Trivy, dependency auditing, and security headers implementation  
+• **Production Monitoring:** Built comprehensive health monitoring with API connectivity validation and performance metrics  
+• **Cloud Architecture:** Automated Vercel deployments with environment management and rollback capabilities  
+
+**Technologies:** Next.js 14, TypeScript, React, Tailwind CSS, Docker, GitHub Actions, Vercel, Trivy, IGDB API
+
+### Can I Play Badminton?
+Developed a full-stack weather application using React/Next.js, Tailwind CSS, and OpenWeatherMap API to determine optimal outdoor conditions for badminton. Implemented real-time weather data parsing and client-server communication protocols to assess wind, temperature, and precipitation parameters for sports activity recommendations.
+
+---
+
+## ADDITIONAL EXPERIENCE
+
+**Home Lab:** Designed and maintain an enterprise-simulated network environment using pfSense firewall, Pi-hole DNS sinkhole, and virtualization tools. Built custom VPN tunnels, real-time monitoring dashboards, and automated backup systems to explore cybersecurity and DevOps concepts.
+
+**Coding Club:** Active member of Code.Resolveꓸꓹ at Queens College. Organize and participate in coding challenges, workshops, and seminars including PC building tutorials and career preparation sessions.
+
+---
+
+## KEY STRENGTHS
+
+• **Bridge Traditional IT & Modern DevOps:** Combines hands-on hardware/networking experience with cutting-edge automation and cloud practices  
+• **Production-Ready Development:** Demonstrated ability to build, deploy, and monitor enterprise-grade applications  
+• **Continuous Learning:** Self-directed learning of emerging technologies including containerization and CI/CD practices  
+• **Problem-Solving:** Systematic approach to troubleshooting from hardware diagnostics to pipeline debugging  
+• **Customer-Focused:** Proven track record of translating technical concepts for diverse audiences 
