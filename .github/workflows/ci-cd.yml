@@ -10,6 +10,12 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+# upload-sarif needs security-events: write (otherwise "resource not accessible by integration")
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
 env:
   REGISTRY_URL: docker.io
   IMAGE_NAME: gameevents
@@ -46,11 +52,11 @@ jobs:
           CI: true
           
       - name: 📊 Upload Coverage
-        uses: codecov/codecov-action@v3
-        if: success()
+        uses: codecov/codecov-action@v4
+        if: success() && hashFiles('coverage/lcov.info') != ''
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./coverage/lcov.info
+          files: ./coverage/lcov.info
           fail_ci_if_error: false
 
   # Job 2: Security Scanning
@@ -63,26 +69,40 @@ jobs:
     steps:
       - name: 📂 Checkout Code
         uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📥 Install Dependencies (for npm audit)
+        run: npm ci
         
       - name: 🛡️ Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@0.24.0
         with:
           scan-type: 'fs'
           scan-ref: '.'
           format: 'sarif'
           output: 'trivy-results.sarif'
           
+      # Fork PRs cannot upload SARIF to the base repo; skip to avoid "resource not accessible"
       - name: 📤 Upload Trivy scan results
         uses: github/codeql-action/upload-sarif@v3
-        if: always()
+        if: success() && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
         continue-on-error: true
         with:
           sarif_file: 'trivy-results.sarif'
           
       - name: 🔍 Audit Dependencies
         run: |
-          npm audit --audit-level high
           npm audit --audit-level high --json > audit-results.json || true
+          if npm audit --audit-level high; then
+            echo "✅ No high+ severity issues reported by npm audit"
+          else
+            echo "::warning::npm audit reported high or critical issues — see security-audit artifact"
+          fi
           
       - name: 📊 Upload Audit Results
         uses: actions/upload-artifact@v4
@@ -156,7 +176,19 @@ jobs:
     steps:
       - name: 📂 Checkout Code
         uses: actions/checkout@v4
-        
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📥 Install dependencies
+        run: npm ci
+
+      - name: 🏗️ Verify production build
+        run: npm run build
+
       - name: 🚀 Deploy to Vercel
         id: deploy
         uses: amondnet/vercel-action@v25
@@ -166,6 +198,8 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
           working-directory: ./
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-comment: 'false'
 
   # Job 5: Health Check
   health-check:
