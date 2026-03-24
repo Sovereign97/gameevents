@@ -1,3 +1,6 @@
+# GameEvents CI/CD
+# IGDB: game queries filter with game_type = 0 (Main Game). The deprecated category = 0
+# filter no longer matches records correctly against current IGDB data, which left lists empty.
 name: 🚀 CI/CD Pipeline
 
 on:
@@ -10,7 +13,7 @@ on:
 env:
   REGISTRY_URL: docker.io
   IMAGE_NAME: gameevents
-  NODE_VERSION: '18'
+  NODE_VERSION: '20'
 
 jobs:
   # Job 1: Code Quality & Testing
@@ -206,6 +209,17 @@ jobs:
           
           curl -f -s "$BASE_URL/api/games/upcoming" > /dev/null
           echo "✅ Upcoming games API accessible"
+
+      - name: 🎮 Verify IGDB lists (game_type filter)
+        run: |
+          BASE_URL="${{ needs.deploy.outputs.preview-url || 'https://gameevents.vercel.app' }}"
+          set -e
+          for ep in upcoming recent trending; do
+            echo "Checking /api/games/$ep ..."
+            json=$(curl -fsS "$BASE_URL/api/games/$ep")
+            echo "$json" | jq -e '.success == true and (.games | type == "array") and (.games | length) > 0' > /dev/null
+            echo "✅ $ep returns non-empty games (IGDB integration OK)"
+          done
 
   # Job 6: Notification
   notify:

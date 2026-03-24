@@ -30,7 +30,7 @@ export async function GET() {
     try {
       await igdbClient.getUpcomingGames();
       healthData.igdb = { status: 'connected', responseTime: Date.now() - startTime };
-    } catch (igdbError) {
+    } catch {
       healthData.igdb = { status: 'disconnected', error: 'Failed to connect to IGDB API' };
       healthData.status = 'degraded';
     }

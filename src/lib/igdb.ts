@@ -96,13 +96,13 @@ class IGDBClient {
     }
   }
 
-  async getUpcomingGames(limit: number = 20): Promise<Game[]> {
+  async getUpcomingGames(limit: number = 50): Promise<Game[]> {
     const today = Math.floor(Date.now() / 1000);
     const sixMonthsFromNow = today + (180 * 24 * 60 * 60); // Extended to 6 months for more games
 
     const query = `
       fields name, summary, first_release_date, cover.url, screenshots.url, genres.name, platforms.name, platforms.abbreviation, rating, rating_count, hypes;
-      where first_release_date >= ${today} & first_release_date <= ${sixMonthsFromNow} & category = 0 & genres != [32] & hypes >= 10;
+      where first_release_date >= ${today} & first_release_date <= ${sixMonthsFromNow} & game_type = 0 & genres != [32];
       sort first_release_date asc;
       limit ${limit};
     `;
@@ -110,13 +110,13 @@ class IGDBClient {
     return this.makeRequest('games', query);
   }
 
-  async getRecentlyReleasedGames(limit: number = 20): Promise<Game[]> {
+  async getRecentlyReleasedGames(limit: number = 50): Promise<Game[]> {
     const today = Math.floor(Date.now() / 1000);
-    const oneMonthAgo = today - (30 * 24 * 60 * 60);
+    const threeMonthsAgo = today - (90 * 24 * 60 * 60); // Extended to 3 months for more games
 
     const query = `
       fields name, summary, first_release_date, cover.url, screenshots.url, genres.name, platforms.name, platforms.abbreviation, rating, rating_count, hypes;
-      where first_release_date >= ${oneMonthAgo} & first_release_date <= ${today} & category = 0 & genres != [32] & hypes >= 10;
+      where first_release_date >= ${threeMonthsAgo} & first_release_date <= ${today} & game_type = 0 & genres != [32];
       sort first_release_date desc;
       limit ${limit};
     `;
@@ -124,10 +124,14 @@ class IGDBClient {
     return this.makeRequest('games', query);
   }
 
-  async getTrendingGames(limit: number = 20): Promise<Game[]> {
+  async getTrendingGames(limit: number = 50): Promise<Game[]> {
+    const today = Math.floor(Date.now() / 1000);
+    const oneYearAgo = today - (365 * 24 * 60 * 60); // Look at games from the last year
+    const sixMonthsFromNow = today + (180 * 24 * 60 * 60); // Include upcoming games
+
     const query = `
       fields name, summary, first_release_date, cover.url, screenshots.url, genres.name, platforms.name, platforms.abbreviation, rating, rating_count, hypes;
-      where hypes >= 10 & rating > 70 & category = 0 & genres != [32];
+      where first_release_date >= ${oneYearAgo} & first_release_date <= ${sixMonthsFromNow} & game_type = 0 & genres != [32] & rating > 60;
       sort hypes desc;
       limit ${limit};
     `;

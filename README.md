@@ -189,7 +189,9 @@ Push to `main` branch triggers:
 2. **Security scanning** for vulnerabilities
 3. **Docker image** building and pushing
 4. **Zero-downtime deployment** to Vercel
-5. **Health check** validation
+5. **Health check** validation (including a smoke test that `/api/games/*` returns non-empty lists when IGDB credentials are configured on Vercel)
+
+**IGDB note:** Game queries use `game_type = 0` (Main Game) instead of the deprecated `category = 0` filter so release lists stay populated against the current IGDB API. Set `TWITCH_CLIENT_ID` and `TWITCH_CLIENT_SECRET` in the Vercel project environment for production.
 
 ### Manual Deployment
 ```bash
